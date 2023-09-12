@@ -1,0 +1,64 @@
+GIT - Documentação
+--------------------------------------------------------------------------
+git-scm.com/book/en/v2
+
+git init
+
+Sincronizar Repositório Local com o Remoto
+-------------------------------------------------------------------------- 
+git remote add origin https://github.com/user/repo.git
+
+git add . 
+git commit -m "xxxxx"
+git push origin 
+
+Reverter Git Init
+--------------------------------------------------------------------------
+rm -rf .git
+
+Restaurar arquivos alterados
+--------------------------------------------------------------------------
+git restore README.md
+
+Para atualizar mensagem
+--------------------------------------------------------------------------
+git commit --amend -m "nova mensagem"
+git log (Consultar Log de Alterações)
+
+Excluir um git commit
+--------------------------------------------------------------------------
+git reset --soft 4dfljdfjkfldjfdjfdjfldlfjd
+git log
+git reflog
+
+Atualiza repositório local com repositório remoto
+--------------------------------------------------------------------------
+git pull
+
+Criar Nova Branches
+--------------------------------------------------------------------------
+git checkout -b teste
+git branch -v
+git merge teste
+git branch -d teste (*para excluir a branch)
+
+baixar p/comparar, depois fazer merge - git fetch *Sem estar mesclando com o repositório local
+--------------------------------------------------------------------------
+git fetch origin main
+git diff main origin/main
+
+clonar apenas uma branch específica
+--------------------------------------------------------------------------
+git clone https://github.com/elidioana/repo-remoto.git --branch teste --single-branch
+
+git stash *para arquivar sem perder 
+--------------------------------------------------------------------------
+git stash
+git stash list
+git checkout -b teste-2
+git stash pop (*para apagar)
+git stash apply (*manter para uso posterior)
+
+Para navegar entre as branchs
+--------------------------------------------------------------------------
+git checkout teste
